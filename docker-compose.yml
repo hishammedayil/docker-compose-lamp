@@ -19,6 +19,7 @@ services:
   mysql:
     build:
       context: "./bin/${DATABASE}"
+    command: "--innodb_use_native_aio=0"
     container_name: '5.7-mysql'
     restart: 'always'
     ports:
